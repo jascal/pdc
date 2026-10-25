@@ -1,0 +1,380 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\usepackage{xurl}
+\hypersetup{pdftitle={Projective Derivation Calculus: Checked Readouts and a Failed Truth Test},pdfauthor={Working draft}}
+\newcommand{\status}[1]{\textsf{[#1]}}
+\newcommand{\Vit}{\operatorname{Vit}}
+\newcommand{\Mar}{\operatorname{Mar}}
+\newcommand{\deriv}{\operatorname{deriv}}
+\newcommand{\bracket}[2]{\lbrack #1\rbrack(#2)}
+\title{Projective Derivation Calculus:\\Checked Readouts and a Failed Truth Test}
+\author{Working draft}
+\date{October 25, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Projective Derivation Calculus (PDC) extends the decode stratum of Projective
+Incidence Calculus (PIC) with position-indexed reads, alternative bodies of
+an atom, explicit Viterbi and marginal readouts, and an external theory
+judgment. Its one-position, one-body vocabulary fragment is kernel-checked
+against PIC. Finite artifacts retain the body table, readout, margin,
+fragility, provenance and covered candidate set. Frozen GPT-2 measurements
+identify the read mixture on 108 head/query instances and exhibit readout
+fragility on competing copy routes. A fixed-computation admission oracle
+admits a positive control, refuses a rational three-context control, and
+finds no singleton irreducibility certificates on 80 Qwen positions.
+An independently checked addition experiment then triggers the program's
+preregistered epistemic stop rule: among certified commitments, 7/8 Viterbi
+answers and 9/10 marginal answers are false in the finite theory.
+The margin certificate preserves a covered score decision; that property
+does not establish truth on this domain. Admission learning is negative,
+and the final held-out service audit has zero coverage. Admitted-memory
+transfer and useful service remain unestablished. This paper
+records the stopped stage and does not claim the full program is complete.
+\end{abstract}
+
+\section{Objects and the PIC seam}
+
+\status{definition} A source contributes an incidence to an atom. A body is
+a finite source coalition; its bracket adds those incidences. For a biased
+decoder, the executable complete-body bracket includes the atom bias once.
+Thus a body's annotation is temperature independent. Alternatives of an
+atom are combined by the temperature family
+\[
+ \alpha_T(a)=T\log\sum_{P\in\deriv(a)}
+      \exp\bigl(\bracket{P}{a}/T\bigr),\qquad T>0.
+\]
+The two readouts are
+\[
+ \Vit(a)=\max_{P\in\deriv(a)}\bracket{P}{a},\qquad
+ \Mar_T(a)=\alpha_T(a).
+\]
+An empty body set has negative-infinity score and cannot win. Winner sets
+retain ties; a tied readout does not commit an atom. Body identifiers retain
+multiplicity when distinct bodies have equal brackets. These sums can count
+shared subbodies repeatedly. No possible-world or disjoint-explanation
+probability semantics is asserted.
+
+\status{proved} Restrict the chart to one position, vocabulary atoms, at most
+one body per atom, and no external theory. For the singleton full-source
+coalition the annotation is PIC's biased logit
+\[
+ \alpha_T(v)=\bracket{S}{v}=L(v)
+       =\left\langle\sum_{j\in S}d_j,U_v\right\rangle+b_v.
+\]
+In the Isabelle representation, a present score is \path{Some} of this
+real value; \path{None} represents an absent atom. The equality to a finite
+logit is the displayed singleton case. Empty atoms are not assigned a
+finite logit by this translation. Positive-temperature softmax preserves
+logit order and argmax sets. Empty/singleton body tables have equal Viterbi
+and marginal annotations, so their winner sets are temperature independent.
+
+These statements import the actual PIC definitions, rather than a parallel
+logit semantics. Their artifacts are \path{i-orca/examples/pdc/PDC_Derive.thy}:
+\path{mar_singleton}, \path{one_body_agreement},
+\path{one_body_temperature_invariance}, and the four
+\path{pic.specialization_alpha_eq_logit},
+\path{pic.specialization_alpha_eq_residual},
+\path{pic.specialization_softmax_order}, and
+\path{pic.specialization_softmax_argmax} lemmas. The strict session is \path{PDC},
+parent \path{PIC_Core}; \path{quick_and_dirty=false}, zero proof holes.
+
+\status{witness, proved} Let atom A have two distinct bodies of score zero
+and atom B have one body of score $1/2$. At $T=1$,
+\[
+ \Vit(A)=0<1/2=\Vit(B),\qquad
+ \Mar_1(A)=\log 2>1/2=\Mar_1(B).
+\]
+The kernel lemmas \path{witness_viterbi}, \path{witness_marginal} and
+\path{witness_fragile} check both winners and their disagreement.
+The one-body inheritance stops when alternatives are summed inside an atom.
+
+\section{Reads, bodies and finite exports}
+
+\status{definition} A head reads key positions through incidences
+$i\mathbin{\triangleright_h}j=\langle q_i,k_j\rangle$. Under a scaled-query
+convention the native GPT-2 score is this incidence divided by
+$\sqrt{d_h}$. The head write is its softmax-weighted value mixture. Its output
+projection is a further linear write; the shared projection bias belongs
+to the block. Value mixtures, vocabulary decisions and external truth are
+distinct objects in the artifact.
+
+\status{empirical, R2} Before capture we fixed three token-ID contexts,
+layers $0,5,11$, heads $0,3,7,11$, and query positions $3,7,15$.
+The 108 cases use the pinned f16 GPT-2 bundle with native f32 arithmetic.
+The observer reads the arrays assigned by the actual forward. The native
+finite causal mask is $-10^{10}$; forbidden-key probability underflows to
+zero on these instances. This numerical convention is recorded explicitly.
+The assignment itself is the masked-softmax/value mixture; f64 recomputation
+and key agreement are separately measured:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+R2 quantity & Result\\
+\midrule
+Scaled-incidence maximum absolute error & $7.143\cdot10^{-6}$\\
+Probability maximum absolute error & $2.983\cdot10^{-7}$\\
+Head-write maximum absolute / RMS error & $6.683\cdot10^{-7}$ / $4.239\cdot10^{-8}$\\
+Incidence/native-probability argmax-set agreement & 108/108\\
+Independent NumPy vocabulary top-1 agreement & 48/48\\
+Observer hidden-state maximum error & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+All 12 named heads pass on this set. No other architecture or prompt
+distribution inherits that identification. See
+\path{fieldrun/experiments/pdc/R2_PREREG.md} and \path{R2_RESULTS.md}.
+
+\status{empirical, R3} A second preregistration fixes 16 contexts with
+competing continuations of a repeated trigram. Every earlier exact match
+and each of the 12 heads generates a body: the actual weighted value write
+at that continuation, projected through its native output matrix and read
+in the measured final-LayerNorm-folded frame. No route is selected using
+the host token. There are 576 bodies, 36 per context. Viterbi agrees with
+the full host on 8/16 contexts and marginal on 6/16; the readouts disagree
+on 2/16. Both agree with the trigram task label on 10/16. Independent NumPy
+predictions agree with all 256 native per-position vocabulary predictions.
+These are candidate copy routes, with no causal sufficiency or necessity
+claim. See \path{R3_PREREG.md}, \path{R3_RESULTS.md}, and the complete
+\path{r3_charts.json} body/source artifact.
+
+\status{empirical, R1} The finite executor retains readout names, full body
+tables and ties. It reproduces the checked witness and matches the same PIC
+argmax on 256 generated one-body programs at five fixed temperatures
+(1,280 evaluations). Its float implementation is not itself a kernel
+certificate; absent, tied and nonfinite inputs have explicit behavior.
+See \path{fieldrun/scripts/pdc_derive.py} and \path{R1_RESULTS.md}.
+
+\section{Admission and its limits}
+
+\status{definition} Crystallization admits an atom as a source only under
+a margin rule. A common score offset does not affect a decision. If the
+coalition margin exceeds $\gamma>2\delta$ and the admitted source's score
+errors, after a common offset, are bounded by $\delta$ at the target and
+every covered rival, its decision survives. The omitted-coalition form
+applies the same premise to the tail incidences. The candidate set must
+remain unchanged throughout the certificate.
+
+\status{proved} \path{i-orca/examples/pdc/PDC_Admission.thy} packages PIC's
+pointwise margin certificate as \path{admitted_source_preserves_decision},
+\path{pic.crystallization_admitted_write}, and
+\path{pic.crystallization_complement_certified}. A fourth lemma,
+\path{pairwise_source_preserves_decision}, permits a guard per rival.
+For a target t and rival v, the body gap must exceed the absolute drift of
+that pair's gap from coalition scores to the source scores. Each pair can
+use its own offset and $\delta$; no whole-vocabulary perturbation ball is
+introduced. All four lemmas pass the strict Isabelle session. Their
+conclusions are score decisions, not truth judgments.
+
+\status{empirical, R4} The oracle fixes measured source writes and frees
+one shared affine decoder frame. Faithfulness and a tested singleton's
+decision are linear inequalities. Feasible frames and solver statuses are
+retained; infeasibility requires checked Farkas multipliers. Solver errors
+remain unknown. Admission is checked separately from LP reducibility.
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Domain & Reducible & Admitted & Irreducible\\
+\midrule
+Positive synthetic corpus, N=64 & 64 & 64 & 0\\
+Three-context refusal control, hard context & 0 & 0 & 1\\
+Qwen held-out regime rerun, N=80 & 80 & 11 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The positive control stores its feasible native frame. The refusal control
+has exact rational singleton Farkas checks. All 80 Qwen physical frame
+witnesses are checked independently of the solver. Maximum faithfulness
+violation is $1.844\cdot10^{-10}$, within the fixed $10^{-7}$ numerical
+tolerance. Eleven first-feasible frames pass the stricter centered-tail
+admission guard; 69 do not. The latter are not universal impossibility
+certificates over all frames or coalitions.
+
+The program's historical ``0/40'' premise required correction: it meant
+zero irreducibility certificates, with every position reducible. The new
+sample likewise has an empty irreducibility-certificate set at N=80. The
+missing historical dump is not claimed to have been replicated bitwise.
+The expectation that this is an established negative admission domain is
+retired. See \path{pil/docs/notes/pdc_r4_prereg.md},
+\path{pdc_r4_outcome.md}, and \path{pil/results/pdc_r4/verification.json}.
+
+\section{External truth: a preregistered failure}
+
+\status{definition} $P\vdash a$ records a source-coalition score decision.
+$\mathcal T\models a$ is a separate decidable judgment. A recorded
+commitment can be affirmed by both, or be a hallucination relative to the
+theory. A miss occurs when the theory affirms an atom that no recorded body
+strictly decides. A fragile truth is selected marginally but not by Viterbi.
+None of these judgments is recovered merely by renaming a host margin.
+
+\status{empirical, R5} The fixed theory is ordinary integer addition for
+operands 0--4 and answers 0--8. Three fixed prompt templates cover all 25
+ordered pairs, giving 75 evaluation contexts. A fourth template's 25
+contexts were reserved until the final audit below. Leading-space answer tokens
+are fixed before any forward call. Each atom has three fixed bodies: the
+full source coalition, the attention-block coalition, and the MLP-block
+coalition. The 2,025 annotations are retained in the exported bundle.
+
+The advance threshold is $\gamma=0.5$. Both the named readout and its chosen
+best-bracket body's margin must clear this threshold. Each covered rival
+must also pass the pairwise drift guard. Ties, coverage mismatches and
+failed guards abstain. The theory does not enter that selection. The
+hallucination bar is strictly below 10\%; zero commitments is untested.
+The preregistered wide-miss threshold is 25\%.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+R5 outcome & Viterbi & Marginal\\
+\midrule
+Certified commitments & 8 & 10\\
+Abstentions & 67 & 65\\
+Theory-affirmed commitments & 1 & 1\\
+Hallucinations & 7 & 9\\
+Hallucination rate among commitments & 87.5\% & 90\%\\
+Raw readout/theory agreement & 16\% & 20\%\\
+Committed/full-host agreement & 62.5\% & 60\%\\
+Committed/covered-candidate host agreement & 100\% & 100\%\\
+\bottomrule
+\end{tabular}
+\end{center}
+There are 47 misses, three fragile contexts, and three fragile truths.
+Both readouts miss the advance bar widely. Both finite-domain epistemic
+claims are retired; the R5 stop restriction is active.
+
+\status{empirical} Native and independent NumPy final-position predictions
+agree 75/75; the observer's hidden-state effect is zero. Raw source-sum,
+final-LN-folding and full-body candidate-score maximum errors are,
+respectively, $1.682\cdot10^{-5}$, $1.702\cdot10^{-4}$ and
+$2.399\cdot10^{-4}$. The finite pairwise check uses actual native candidate
+scores, so those discrepancies are not hidden behind an assumed global
+epsilon. A separate auditor reconstructs every source/body annotation,
+both readouts and every commit/abstain decision. Maximum annotation
+discrepancy is zero. A separate theory checker computes addition from the
+operands and rejects a purported commitment lacking a body decision.
+
+One retained case makes the limitation concrete: \path{t2-a0-b0} asks for
+$0+0$ under the ordinary-addition prompt. Both readouts commit 1 using the
+MLP coalition; the unrestricted native host also predicts 1. The body
+margin is 3.040224 and minimum pairwise guard slack is 1.040681. The
+certificate holds while the theory rejects the answer. An attention body
+in the same chart decides 0, so this case is not a miss. The negative
+result concerns this frozen model, domain, prompts, candidate set, bodies
+and threshold. It is not an impossibility theorem about all models.
+
+The full evidence is \path{fieldrun/experiments/pdc/R5_PREREG.md},
+\path{R5_RESULTS.md}, \path{r5_bundle.json}, \path{r5_audit.json}, and
+\path{r5_theory_results.json}. Their input hashes are retained. The
+certificate covers nine tokens; it does not certify the unrestricted
+vocabulary argmax, whose agreement is separately reported above.
+
+\section{The stopped program and remaining obligations}
+
+\status{empirical, R6} A fixed four-arm comparison now measures all 27
+triples in $\{0,1,2\}^3$ for $(a+b)+c$. It reuses nine first-hop R5 captures
+and freezes exact token assembly, memory vectors and admission attempts
+before any new hop-2 output. All nine first hops are refused by the recorded
+native-frame singleton procedure, giving 27 refused triples and no admitted
+stratum. Re-derive and crystallize each score 3/27; generated append and tool
+append each score 9/27. Generated append retains all three baseline-correct
+cases and adds six, a 22.22-point gain above the advance five-point bar.
+This supports the operational comparison on this refused slice. Admitted
+redundancy and actual admitted replay remain untested. The tool and generated
+arms have equal aggregate accuracy but different correctness on four cases;
+no pointwise tool upper bound or semantic-content necessity is proved.
+
+Independent NumPy final-position predictions agree 108/108. Every refused
+crystallize case is exactly identical to re-derive and injects no source.
+A separate zero/nonzero replay engineering check finds zero-write identity,
+a nonzero hidden effect of 0.537842 and agreement of the induced change with
+NumPy within $6.390\cdot10^{-5}$. The baseline's absolute hidden mismatch
+of 0.003174 is separately retained; it is not claimed below the initially
+attempted $10^{-3}$ absolute diagnostic. These engineering probes are not
+admitted memory observations. See
+\path{fieldrun/experiments/pdc/R6_PREREG.md}, \path{R6_RESULTS.md}, and
+\path{r6_results.json}. The exported two-hop graph has 117 independently
+checked affine decode nodes and 108 provenance paths, with 27 generated,
+27 external-theory tool and 54 no-memory edges. Its finite margin coverage
+is distinct from its observed unrestricted native token.
+
+\status{empirical, R7 negative} Two preregistered 200-proposal arms
+learn an untied output frame and bias with fixed native writes and gates.
+Both decode-only and admission-objective arms retain zero admissions out
+of 75; the improvement and control-advantage gates fail. All 183 protected
+full-host predictions remain unchanged. All accepted steps have nonzero
+motion, satisfy logged per-step drift premises, and retain $\mathrm{FP}\ge W$.
+Independent NumPy endpoint reconstruction agrees within $5.41\cdot10^{-13}$.
+These are protected-bank observations, not a generalization result; 25
+reserved contexts remained untouched until the final audit below. See
+\path{pil/docs/notes/pdc_r7_prereg.md}, \path{pdc_r7_outcome.md}, and
+\path{pil/results/pdc_r7/verification.json}. R6's admitted-side claim remains
+unmeasured, R5 remains retired, and no chart-depth versus layer-depth
+function is claimed.
+
+\status{empirical, R8-H} A preregistered host-only continuation now runs a
+fresh native subset forward and returns a served bundle or an explicit
+abstention. A tokenizer-text rule freezes 1,703 probe tokens before their
+scores are inspected. Its certificate checks the chosen body's target
+against every probe, while the derive query retains the nine answer atoms.
+The independent audit checks 383,175 body/probe annotations and finds zero
+source-write and probe-score discrepancy against a full baseline. Native
+output-row dot calls fall from 3,769,275 to 127,725 across the 75 contexts,
+with 383,175 additional body/probe dots in each arm. No layer or position
+is skipped. Both readouts abstain on all 75 contexts. The required nonempty
+coverage gate therefore fails; host agreement and hallucination rates among
+commitments are undefined. This compute reduction produces no usable
+answers under the fixed policy. See
+\path{fieldrun/experiments/pdc/R8H_PREREG.md}, its timing addendum,
+\path{R8H_RESULTS.md}, and \path{r8h_results.json}.
+
+One fixed ordered timing pair gives 13.355 seconds end to end for the full
+baseline and 12.871 for subset service; these descriptive timings do not
+establish a general speedup. The runtime also serves a single named
+non-held-out request and rejects a reserved request before execution.
+The final audit below subsequently consumed the 25 reserved contexts. R8's original useful
+truth/host service gate is \status{open}; theory soundness is not advertised
+from the failed margin instrument.
+
+\status{open} This working paper records R0--R8 outcomes after the stop, including
+negative R7 and the final held-out diagnostic. It provides a stopped-stage
+evidence map in \path{pdc/spec/EVIDENCE.md}, not a passing R0--R8 program
+or criterion-9 result. The complete north star remains
+unachieved. The Eiffel-tower illustration in the specification remains an
+illustration and supplies no experimental evidence.
+
+\section{Artifact discipline and reproducibility}
+
+The canonical definitions and claim tags are in \path{pdc/spec/PDC_SPEC.md}.
+PDC contains the specification and this paper; proof sources remain in
+i-orca, frozen-model exports in fieldrun, and admission-oracle work in pil.
+The repos exchange named JSON/NPZ artifacts, without local-path code imports.
+\status{empirical, final held-out diagnostic} After fixing the R6/R7
+outcomes, a one-shot preregistered audit opens the 25 reserved template-3
+contexts with the unchanged original R8-H policy. Both readouts abstain
+on all 25. Host agreement and hallucination among commitments are undefined;
+the nonempty-coverage gate fails. The independent checker verifies 127,725
+body/probe annotations with zero discrepancy. Native output-row calls
+fall from 1,256,425 to 42,575, with 127,725 body/probe dots per arm and no
+layer or position skipped. This is compute saving at zero useful coverage.
+Each bundle records memory provenance as none and external theory judgment
+separately. No learning endpoint was selected after its failed advance gate.
+See \path{fieldrun/experiments/pdc/FINAL_AUDIT_PREREG.md},
+\path{FINAL_AUDIT_RESULTS.md}, and \path{final_audit/results.json}.
+The reserved slice is now consumed. R8 and criterion 9 remain unmet; this
+paper documents a stopped stage rather than achievement of the north star.
+
+Every \status{proved} statement above names its checked theory and lemma;
+every \status{empirical} claim names a preregistration and run. Concrete
+floating-point data checks are distinguished from symbolic kernel theorems.
+
+The proofs build with Isabelle2025-2:
+\begin{quote}\small\ttfamily
+isabelle build -o timeout=40 -d i-orca/examples/pic\_core -D i-orca/examples/pdc
+\end{quote}
+Native capture commands, independent NumPy checks, the solver-free R4
+verifier, and the R5 bundle/theory auditors are listed in the corresponding
+result documents. The finite executor and certificate/theory tests pass.
+The current release status is a local reviewable draft; repository publication
+is pending. R8-H is a measured negative coverage arm; no unperformed or failed positive gate
+is counted as completed by this paper.
+\end{document}

@@ -1,0 +1,39 @@
+{
+  "schema": "pdc.package-verification.v1",
+  "archive": "pdc-review-v0.10.tar.gz",
+  "archive_bytes": 596316806,
+  "archive_sha256": "4719765e54374771df2ea15cd736653c4896aa0fd27538eb7f82082e2e4b3f6c",
+  "archived_files_verified": 448,
+  "package_inventory_files": 442,
+  "package_inventory_bytes": 1205412554,
+  "standalone_PIC_Learn_build_exit": 0,
+  "scratch_replay_directory": "/tmp/pdc-v010-package-check",
+  "scratch_r7_endpoint_replay": {
+    "decode": {
+      "admitted": 0,
+      "full_host_matches": 183,
+      "endpoint_error": 1.5631940186722204e-13,
+      "fp": 0.14523653868326367,
+      "welch": 0.0007153042988640814,
+      "nonzero_steps": 200,
+      "per_step_premises": "checked logged budgets; endpoint independently reconstructed"
+    },
+    "admission": {
+      "admitted": 0,
+      "full_host_matches": 183,
+      "endpoint_error": 1.2789769243681803e-13,
+      "fp": 0.14523685297738928,
+      "welch": 0.0007153042988640814,
+      "nonzero_steps": 200,
+      "per_step_premises": "checked logged budgets; endpoint independently reconstructed"
+    }
+  },
+  "claim": "portable stopped-stage snapshot, not achievement of the original goal",
+  "external_prerequisites": [
+    "Python packages",
+    "Isabelle2025-2",
+    "TeX Live",
+    "pinned GPT-2 model for model-dependent auditors"
+  ],
+  "publication": "pending destination; no upload performed"
+}
