@@ -4,6 +4,7 @@ The central PDC paper/spec PR links three companion PRs. Review all four
 before recommending a new experiment. These changes are proposed, not merged.
 No automatic Grok review has been invoked by this document.
 
+- Central paper/spec PR: https://github.com/jascal/pdc/pull/1
 - Runtime, chart/service code and small results: https://github.com/jascal/fieldrun/pull/147
 - Admission oracle and guarded learning: https://github.com/jascal/pil/pull/155
 - Strict Isabelle proofs: https://github.com/jascal/i-orca/pull/37

@@ -1,0 +1,27 @@
+{
+  "central_pr": "https://github.com/jascal/pdc/pull/1",
+  "companions": [
+    {
+      "repo": "jascal/fieldrun",
+      "pr": 147,
+      "commit": "c10668f6d65d4ed505f82958458054b0f8cf662e"
+    },
+    {
+      "repo": "jascal/pil",
+      "pr": 155,
+      "commit": "7e4a968c336eda70b76ee658e984775151d063ae"
+    },
+    {
+      "repo": "jascal/i-orca",
+      "pr": 37,
+      "commit": "56d1e8d446af1cdc734a7f59e32a8d7259b6f55a"
+    }
+  ],
+  "evidence_release": "https://github.com/jascal/pdc/releases/tag/pdc-v0.10-evidence",
+  "evidence_asset": "pdc-review-v0.10.tar.gz",
+  "evidence_bytes": 596316806,
+  "github_verified_digest": "sha256:4719765e54374771df2ea15cd736653c4896aa0fd27538eb7f82082e2e4b3f6c",
+  "scope": "reviewable stopped-stage results; scientific goal remains incomplete",
+  "reviewer_invocation": "not invoked; user-ready prompts in GROK_REVIEW.md",
+  "archive_scope": "original audited snapshot; PRs add publication documentation"
+}
