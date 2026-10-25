@@ -1,0 +1,10 @@
+# LaTeX, if a paper is added later
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
