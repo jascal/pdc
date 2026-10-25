@@ -7,6 +7,21 @@ for the frozen proof, source, paper and run artifacts. Its inventory checker
 lives in fieldrun; no code or proof is placed in pdc. A hash proves artifact
 identity, not correctness. Use the named independent checks for correctness.
 
+## Scope of every kernel claim
+
+The kernel results concern finite score identities, readout comparisons and
+preservation of **covered score decisions** under explicit premises. They do
+not establish external-theory truth, useful reasoning, or full-vocabulary
+host agreement beyond the covered candidate set. Nonzero admission alone
+would not establish these stronger claims. Full-host agreement and theory
+judgments require independent evidence; protected-bank preservation is not
+generalization. R7's fixed-budget negative neither proves unlearnability
+nor identifies the protected-margin constraint as the sole bottleneck.
+
+The final 25-context slice is **consumed**. It must not be used for any
+future threshold, body-generator or checkpoint selection. Any new
+confirmatory experiment requires fresh held-out data.
+
 | Tag / scope | Statement or run | Evidence / checker |
 |---|---|---|
 | proved: one-body PIC seam | `mar_singleton`, `one_body_agreement`, `one_body_temperature_invariance`, four `pic.specialization_*` lemmas | i-orca/examples/pdc/PDC_Derive.thy; strict PDC session |

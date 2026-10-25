@@ -167,6 +167,18 @@ use its own offset and $\delta$; no whole-vocabulary perturbation ball is
 introduced. All four lemmas pass the strict Isabelle session. Their
 conclusions are score decisions, not truth judgments.
 
+\paragraph{Scope of all kernel claims.}
+The kernel results concern finite score identities, readout comparisons and
+preservation of covered score decisions under explicit premises. They do
+not establish external-theory truth, useful reasoning, or agreement with
+an unrestricted full-vocabulary host outside the covered candidate set.
+A nonzero admission rate alone would establish none of those stronger
+claims. Full-host agreement and external-theory judgments require their
+own independently checked evidence; protected-bank preservation is not
+generalization. R7's fixed-budget negative does not identify a unique
+bottleneck or prove that admission is unlearnable.
+
+
 \status{empirical, R4} The oracle fixes measured source writes and frees
 one shared affine decoder frame. Faithfulness and a tested singleton's
 decision are linear inequalities. Feasible frames and solver statuses are
@@ -360,7 +372,9 @@ Each bundle records memory provenance as none and external theory judgment
 separately. No learning endpoint was selected after its failed advance gate.
 See \path{fieldrun/experiments/pdc/FINAL_AUDIT_PREREG.md},
 \path{FINAL_AUDIT_RESULTS.md}, and \path{final_audit/results.json}.
-The reserved slice is now consumed. R8 and criterion 9 remain unmet; this
+The reserved slice is now consumed and must not be used for any future
+threshold, body-generator or checkpoint selection. A new confirmatory
+experiment requires fresh held-out data. R8 and criterion 9 remain unmet; this
 paper documents a stopped stage rather than achievement of the north star.
 
 Every \status{proved} statement above names its checked theory and lemma;
