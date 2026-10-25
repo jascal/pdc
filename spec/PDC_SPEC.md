@@ -1,9 +1,20 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.10). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.11). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
 
+> **v0.11 (2026-10-25)** — a separately frozen, saved-frame R7 diagnostic
+> compares original singleton admission, half absolute floor, highest-source
+> plus bias, and random-source plus bias procedures. Every arm remains 0/75
+> at initialization and both saved endpoints; protected outputs are 183/183.
+> Nine contexts have a matching singleton decision without the certificate;
+> no singleton passes the centered-tail drift premise. The absolute floor
+> alone cannot explain all refusals. Larger coalitions and causal effects of
+> the optimizer constraint remain untested. This is not fresh confirmation.
+> [Diagnostic outcome](https://github.com/jascal/pil/blob/research/pdc-stopped-stage/docs/notes/pdc_r7_diagnostic_outcome.md).
+> The original v0.10 archive is unchanged; the diagnostic is in PIL PR #155.
+>
 > **v0.10 (2026-10-25)** — the final reserved 25-context diagnostic
 > audit evaluates the unchanged R8-H policy once. Both readouts abstain on
 > all 25 contexts; nonempty coverage fails. It checks 127,725 body/probe

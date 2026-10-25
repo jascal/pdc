@@ -1,4 +1,4 @@
-# PDC v0.10 evidence map
+# PDC v0.11 evidence map
 
 This is a **stopped-stage review**, not a passing north-star claim.
 The original evidence snapshot is hosted in the [GitHub prerelease](https://github.com/jascal/pdc/releases/tag/pdc-v0.10-evidence). Paths below are relative to the shared workspace root.
@@ -37,6 +37,7 @@ confirmatory experiment requires fresh held-out data.
 | empirical R5, negative | 7/8 and 9/10 hallucinations among commitments; epistemic stop | fieldrun/experiments/pdc/{R5_PREREG.md,R5_RESULTS.md,r5_audit.json,r5_theory_results.json}; scripts/pdc_bundle_audit.py, pdc_theory_check.py |
 | empirical R6, narrowed | 27 refused triples, four arms; 117 graph nodes, 108 provenance paths | fieldrun/experiments/pdc/{R6_PREREG.md,R6_RESULTS.md,r6_results.json,r6_chart_verification.json}; scripts/pdc_memory_audit.py, pdc_memory_bundle_check.py |
 | empirical R7, negative | both 0/75 admissions after 200 proposals; 183 protected outputs | pil/docs/notes/pdc_r7_{prereg,outcome}.md; results/pdc_r7/{results,verification}.json; experiments/verify_pdc_r7.py |
+| empirical saved-frame diagnostic, negative | four arms each 0/75 at three endpoints; nine matching singleton decisions, zero strict drift passes | pil/docs/notes/pdc_r7_diagnostic_{prereg,outcome}.md; results/pdc_r7_diagnostic/{results,verification}.json; experiments/verify_pdc_r7_diagnostic.py; follow-up to original archive |
 | empirical R8-H, negative | actual row savings, zero coverage on 75 | fieldrun/experiments/pdc/{R8H_PREREG.md,R8H_RESULTS.md,r8h_results.json}; scripts/pdc_service_audit.py |
 | empirical final heldout, negative | unchanged policy, zero coverage on reserved 25; NumPy 25/25 | fieldrun/experiments/pdc/{FINAL_AUDIT_PREREG.md,FINAL_AUDIT_RESULTS.md}; final_audit/{manifest,results,reference_verification}.json; scripts/pdc_final_audit_check.py |
 

@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current stopped-stage version: **v0.10**. R5 retired the epistemic claim;
+Current stopped-stage version: **v0.11**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -79,3 +79,10 @@ changes; default-branch links become current only after merging.
 - Companion PRs: [fieldrun #147](https://github.com/jascal/fieldrun/pull/147),
   [pil #155](https://github.com/jascal/pil/pull/155),
   [i-orca #37](https://github.com/jascal/i-orca/pull/37).
+
+
+v0.11 adds the [saved-frame R7 diagnostic](https://github.com/jascal/pil/blob/research/pdc-stopped-stage/docs/notes/pdc_r7_diagnostic_outcome.md):
+all four procedures retain 0/75 admissions at three endpoints. Nine contexts
+have matching singleton decisions without the stronger certificate; none
+passes its centered-tail drift premise. This is not fresh confirmation or
+a claim that larger coalitions cannot work. The v0.10 archive is unchanged.

@@ -73,3 +73,17 @@ Distinguish failure of a premise, failure of the implementation and failure
 of the scientific hypothesis. Do not reuse the consumed final 25 cases or
 revive the retired certificate-to-truth claim. If neither option offers a
 decisive new test, say so rather than manufacture another passing toy.
+
+
+## Subsequent user-supplied revision: saved-frame diagnostic
+
+The user supplied Grok's revised proposal for a four-arm diagnostic using
+only existing R7 development artifacts. A separate protocol freezes the
+actual R7 floor semantics, target-score ranking and cardinality-matched
+random singleton-plus-bias control. No new training or model calls occur.
+All four arms have zero admissions at all three saved endpoints; nine
+contexts have a matching singleton without the stronger certificate, and
+none passes its centered-tail drift condition. This is local diagnostic
+evidence, not a unique causal bottleneck or a claim about larger coalitions.
+See PIL PR #155's `pdc_r7_diagnostic_outcome.md` and independent verification.
+The original v0.10 release and the consumed final-25 prohibition are unchanged.

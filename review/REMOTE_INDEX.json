@@ -9,7 +9,7 @@
     {
       "repo": "jascal/pil",
       "pr": 155,
-      "commit": "7e4a968c336eda70b76ee658e984775151d063ae"
+      "commit": "31c5e3fba49f9309b257f19a576136c4930f7a5a"
     },
     {
       "repo": "jascal/i-orca",
@@ -23,5 +23,7 @@
   "github_verified_digest": "sha256:4719765e54374771df2ea15cd736653c4896aa0fd27538eb7f82082e2e4b3f6c",
   "scope": "reviewable stopped-stage results; scientific goal remains incomplete",
   "reviewer_invocation": "not invoked; user-ready prompts in GROK_REVIEW.md",
-  "archive_scope": "original audited snapshot; PRs add publication documentation"
+  "archive_scope": "original audited snapshot; PRs add publication documentation",
+  "spec_version": "0.11",
+  "followup": "Saved-frame diagnostic is committed to PIL PR #155; original v0.10 archive unchanged."
 }
