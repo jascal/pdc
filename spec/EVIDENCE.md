@@ -64,3 +64,18 @@ transfer, useful R8 coverage and criterion 9. R7 is a fixed-budget negative,
 not an impossibility theorem. Appendix A is an illustration. The companion review branches and complete archived snapshot are linked from
 `review/GROK_REVIEW.md`. Default-branch paths in historical notes describe
 intended merged locations; use the PR branches while review is open.
+
+
+## v0.14: Qwen two-hop and guarded-learning extension (empirical)
+
+- [Frozen memory protocol and results](https://github.com/jascal/fieldrun/tree/de7e399/experiments/pdc_qwen35_memory): 27 refused triples, 54 unique second-hop inputs; full-host accuracy 12/27 rederive/crystallize and 27/27 generated/tool. Independent reference 54/54 and body audit pass. Empty/nonempty assistant-history confound remains; no admitted replay or admitted-stratum redundancy. Baseline readouts each have 14 hallucinations among 25 commitments.
+- [Frozen learning protocol and outcome](https://github.com/jascal/pil/tree/dd8a268/docs/notes): both arms complete 200 proposals, admissions 0/100 throughout. Independent endpoint reconstruction confirms all 208 protected decisions and full-vocabulary FP/W. Intermediate evidence is runtime logs, not independently reconstructed frames.
+- [Learned-frame chart audit](https://github.com/jascal/fieldrun/blob/de7e399/experiments/pdc_qwen35_memory/learning_chart_audit.json): chart-quality gate passes; joint admission advance gate fails. No fresh confirmation, actual admitted replay, epistemic revival or useful-service claim.
+
+The original final 25-context slice remains consumed and prohibited for future
+threshold/body selection. Former Qwen held-out wordings are now development
+data because learning uses all 100 cases. Existing releases remain immutable.
+
+[Full Qwen memory/learning evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-learning-v1): 143 verified payload files,
+561684314 bytes; SHA-256 `633fa531742d5fbda36d239e2b7cf532d8b4e84ebfc8f28caf4b5acf99ef463b`.
+Depends on the original Qwen release; weights/environments remain external.

@@ -1,8 +1,25 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.13). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.14). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
+
+> **v0.14 (2026-10-26)** — **empirical**, preregistered Qwen two-hop
+> refused-stratum comparison: rederive/crystallize 12/27 full-host correct,
+> generated/tool 27/27; 54 unique second-hop inputs, independent reference
+> agreement 54/54. Appending also changes an empty assistant turn to a
+> nonempty one, so semantic memory use is not isolated. Both baseline
+> readouts commit 25 answers, including 14 hallucinations. The retired
+> certificate-to-truth claim remains retired. There are no admitted cases
+> or actual admitted residual replays. Subsequent guarded output-frame
+> learning completes 200 proposals per arm with 0/100 admissions in both
+> control and admission arms. Independent endpoint checks preserve all
+> 208 native decisions and full-vocabulary FP ≥ W; intermediate checks
+> inspect runtime logs only. The chart-quality gate passes, but the joint
+> admission advance gate fails. These are fixed-budget development results,
+> not fresh confirmation or impossibility. No extra proposals or retuning.
+> [Memory artifacts](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_memory)
+> and [learning outcome](https://github.com/jascal/pil/blob/research/pdc-stopped-stage/docs/notes/pdc_qwen35_learning_outcome.md).
 
 > **v0.13 (2026-10-25)** — a separately frozen Qwen saved-source
 > diagnostic finds a singleton with the same covered argmax in 100/100 cases,

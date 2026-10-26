@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current evidence version: **v0.13**. R5 retired the epistemic claim;
+Current evidence version: **v0.14**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -102,3 +102,13 @@ The [saved-source singleton diagnostic](https://github.com/jascal/fieldrun/tree/
 finds matching singleton decisions in 100/100 cases but 0 admissions under
 both sufficient guards. This separates source alignment from the stronger
 certificate; it does not test larger coalitions or causal replay.
+
+
+v0.14 records the Qwen two-hop refused slice (12/27 baseline versus 27/27
+with the correct intermediate appended) and guarded learning (0/100
+admissions in both 200-proposal arms). The memory comparison has a history
+format confound; baseline charts still commit 14 wrong answers. No admitted
+replay, useful service, or fresh held-out north-star result is established.
+
+[Qwen memory/learning raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-learning-v1) includes the source captures and
+learned output frames, with a verified per-file manifest.
