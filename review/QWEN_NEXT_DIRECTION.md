@@ -1,7 +1,7 @@
-# Grok review and next-direction prompt after Qwen v0.14
+# Grok review and next-direction prompt after Qwen v0.15
 
 Review PDC PR #1, fieldrun PR #148 (stacked on #147), PIL PR #155 and
-i-orca PR #37 as one research change. Start from the v0.14 paper, evidence
+i-orca PR #37 as one research change. Start from the v0.15 paper, evidence
 map, Qwen memory PREREG/RESULTS, PIL Qwen learning protocol/outcome, and
 independent endpoint and chart audits. The supplemental
 `pdc-qwen35-memory-learning-v1` release contains raw data and frames and
@@ -16,7 +16,7 @@ confounded. Baseline charts still commit 14 hallucinations among 25 answers.
 Both 200-proposal learning arms retain 0/100 admissions and all 208 protected
 host decisions, including 30 wrong second-hop decisions. Endpoints were
 independently reconstructed; intermediate trajectories were not saved.
-No actual admitted residual replay occurred. Original R5 claims remain
+A separately preregistered development control now finds period9/27 correct and wrong-digit0/27 correct, with27/27 following the wrong supplied intermediate; independent reference54/54 and input/count/hash audit pass. This supports supplied-digit sensitivity, without an exclusive internal-mechanism or fresh-confirmation claim. No actual admitted residual replay occurred. Original R5 claims remain
 retired; the original final 25-context slice is consumed, and all 100 Qwen
 first-hop cases are now development data.
 

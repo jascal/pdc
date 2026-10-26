@@ -480,6 +480,22 @@ confirmation or actual admitted replay is claimed. See
 \path{pil/results/pdc_qwen35_learning/verification.json}, and
 \path{fieldrun/experiments/pdc_qwen35_memory/learning_chart_audit.json}.
 
+\status{empirical, memory-content controls} A separately preregistered
+development diagnostic fixes two new one-token controls on the same 27
+known triples. A period gives 9/27 correct final answers. A wrong digit
+$w=(a+b+1)\bmod 5$ gives 0/27 correct, with all 27 answers equal to $w+c$.
+The reused empty/correct-digit baselines remain 12/27 and 27/27. Native and
+independent reference agree 54/54; an independent input/count auditor
+checks all contexts and 23 frozen input/code/model/runtime hashes.
+The preregistered content-sensitivity bar passes, and neutral improvement
+does not. Correct and wrong digits use identical answer-slot lengths and
+surrounding IDs: supplied-digit content affects this slice's behavior.
+The period is an imperfect distribution/semantics control. No exclusive
+internal mechanism, fresh confirmation, admitted residual replay or
+certificate-to-truth claim follows. See
+\path{fieldrun/experiments/pdc_qwen35_memory_controls/PREREG.md},
+\path{RESULTS.md}, \path{results.json}, and \path{verification.json}.
+
 Every \status{proved} statement above names its checked theory and lemma;
 every \status{empirical} claim names a preregistration and run. Concrete
 floating-point data checks are distinguished from symbolic kernel theorems.

@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current evidence version: **v0.14**. R5 retired the epistemic claim;
+Current evidence version: **v0.15**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -112,3 +112,13 @@ replay, useful service, or fresh held-out north-star result is established.
 
 [Qwen memory/learning raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-learning-v1) includes the source captures and
 learned output frames, with a verified per-file manifest.
+
+
+v0.15 adds fixed memory-content controls on the same27 development triples:
+a period gives9/27 correct; a wrong intermediate gives0/27, with all27
+answers following that wrong value. This supports supplied-digit sensitivity
+on this slice, including error propagation; it is not admitted replay or
+fresh confirmation. Correct/empty baselines remain27/27 and12/27.
+
+[Memory-control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1) contains all new captures and reference
+outputs, with a per-file verified manifest.

@@ -1,8 +1,20 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.14). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.15). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
+
+> **v0.15 (2026-10-26)** — **empirical**, a separately preregistered
+> development diagnostic adds two one-token controls to the same27 known
+> two-hop triples. Empty/correct-digit baselines remain12/27 and27/27;
+> a period yields9/27, and a wrong digit yields0/27 correct, with all27
+> answers following the wrong intermediate plus c. Native/reference agree54/54;
+> independent input/count/hash audit passes. The predeclared content-sensitivity
+> bar passes, while neutral improvement does not. This supports supplied-digit
+> sensitivity on this slice; punctuation is an imperfect format control.
+> No exclusive mechanism, fresh confirmation, admitted replay or epistemic
+> revival follows. Stop after the fixed54 native and54 reference forwards.
+> [Protocol/results](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_memory_controls).
 
 > **v0.14 (2026-10-26)** — **empirical**, preregistered Qwen two-hop
 > refused-stratum comparison: rederive/crystallize 12/27 full-host correct,

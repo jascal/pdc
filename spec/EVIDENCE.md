@@ -79,3 +79,11 @@ data because learning uses all 100 cases. Existing releases remain immutable.
 [Full Qwen memory/learning evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-learning-v1): 143 verified payload files,
 561684314 bytes; SHA-256 `633fa531742d5fbda36d239e2b7cf532d8b4e84ebfc8f28caf4b5acf99ef463b`.
 Depends on the original Qwen release; weights/environments remain external.
+
+
+## v0.15 memory-content controls (empirical, development only)
+
+[Protocol, results and independent verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_memory_controls): published preregistration efa57e0 before inference;54 unique new inputs on27 known triples. Period9/27 correct; wrong digit0/27 correct and27/27 following-wrong. Reused empty/correct-digit baselines12/27 and27/27. Independent reference54/54 and23 frozen hashes pass. Predeclared content-sensitivity bar passes, neutral-improvement bar fails. No exclusive internal mechanism, admitted replay, fresh confirmation, body search, service saving or epistemic revival.
+
+[Control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1):39 verified payload files,93344761 bytes;
+SHA-256 `b4196b098f5d673f4418ed5f2b9dd0bc78d762f8f75b9bbb61db29c0ff5d10ad`. Previous releases are unchanged.
