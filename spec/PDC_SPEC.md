@@ -1,8 +1,16 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.16). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.17). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
+
+> **v0.17 (2026-10-26)** — replay-hook engineering identifies and fixes a
+> DeltaNet normalization mismatch on a separate implementation branch.
+> The failed initial gate is retained; identical engineering inputs pass
+> after the correction. Old archives/runtime are unchanged, and previous
+> native-group counts must not be pooled into a corrected-runtime study.
+> No fresh transfer prompts or admitted replay result. See the engineering
+> correction note below and [PR#149](https://github.com/jascal/fieldrun/pull/149).
 
 > **v0.16 (2026-10-26)** — **empirical**, a separately frozen native-
 > coalition diagnostic evaluates all2080 pairs, ten fixed prefix/suffix
@@ -641,3 +649,24 @@ read the new position. That last sentence is the open hypothesis, applied to the
 *This spec is versioned on its own. A PIC theorem cited here keeps PIC's tag and PIC's citation.
 When a PDC statement becomes a theorem in i-orca, or a measurement in fieldrun or pil, update the
 section and bump the version. Do not bump PIC for a PDC change.*
+
+
+## Engineering correction after v0.16
+
+**Empirical, engineering correction (2026-10-26).**
+[Fieldrun PR#149](https://github.com/jascal/fieldrun/pull/149) corrects
+DeltaNet normalization from sqrt(sum(q*q))+epsilon to the installed
+Transformers reference's sqrt(sum(q*q)+epsilon). A low-norm official-kernel
+golden fails before correction (error0.08847). The original tiny hidden
+engineering gate fails even without replay and remains recorded. SAME
+inputs/reference and unchanged1e-4 threshold pass after correction (maximum
+hidden error7.153e-7), with tiny9/9, ordinary60/60 and real5/5 global reference
+agreement and194 native tests. Zero replay is bit-identical. Real float16
+reference hidden differences up to0.03407 remain descriptive. This is an
+intentional default-kernel correction and an opt-in final-query embedding
+replay hook, not admitted semantic transfer. The original native binary
+SHA90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
+old archives/results remain unchanged. Old coalition/admission counts do
+not establish counts on the corrected computation; future studies must
+capture and certify their own actual carriers. No fresh transfer prompts
+have run. [Failures, protocol, correction and verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-replay/experiments/pdc_qwen35_replay_engineering).

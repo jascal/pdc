@@ -2,7 +2,7 @@
 
 `pdc_calculus.tex` expands the R0–R8 specification, records the triggered
 R5 epistemic stop rule, R6's narrowed refused-slice outcome and R8-H's
-negative coverage experiment, R7's negative learning result and the final held-out audit. `pdc_calculus.pdf` is the eight-page compiled draft including the v0.16 fixed-coalition diagnostic.
+negative coverage experiment, R7's negative learning result and the final held-out audit. `pdc_calculus.pdf` is the nine-page compiled draft including the v0.17 normalization correction/replay engineering.
 It is a review artifact with its source and PDF in the central GitHub PR;
 the complete original evidence snapshot is in the v0.10 GitHub prerelease. It does not close the
 full R9 gate or claim admitted-memory transfer, useful R8 service coverage, or criterion-9 success.

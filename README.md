@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current evidence version: **v0.16**. R5 retired the epistemic claim;
+Current evidence version: **v0.17**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -128,3 +128,8 @@ v0.16 records a frozen saved-frame coalition diagnostic: no native pair
 passes, last8 contributions pass exact5/100 (compact gate inconclusive),
 and last16 pass77/100 exact and29/100 centered. Larger-group passage
 does not establish replay, pruning or fresh generalization.
+
+
+v0.17 records [PR#149](https://github.com/jascal/fieldrun/pull/149): a
+DeltaNet normalization correction and opt-in replay-hook engineering. Old
+archives/runtime remain unchanged; no admitted transfer is established.

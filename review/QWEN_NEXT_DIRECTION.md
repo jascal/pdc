@@ -1,7 +1,7 @@
-# Grok review and next-direction prompt after Qwen v0.16
+# Grok review and next-direction prompt after Qwen v0.17
 
 Review PDC PR #1, fieldrun PR #148 (stacked on #147), PIL PR #155 and
-i-orca PR #37 as one research change. Start from the v0.16 paper, evidence
+i-orca PR #37 as one research change. Start from the v0.17 paper, evidence
 map, Qwen memory PREREG/RESULTS, PIL Qwen learning protocol/outcome, and
 independent endpoint and chart audits. The supplemental
 `pdc-qwen35-memory-learning-v1` release contains raw data and frames and
@@ -45,3 +45,24 @@ against20/100 bar. Last16 pass77/100 exact and29/100 centered; last32 pass
 pruning, global minimum coalition size or actual memory transfer. Do not
 base the next recommendation on the now-false premise that all native
 groups refuse; distinguish larger fixed groups from compact<=8 bodies.
+
+
+Latest engineering prerequisite:
+
+**Empirical, engineering correction (2026-10-26).**
+[Fieldrun PR#149](https://github.com/jascal/fieldrun/pull/149) corrects
+DeltaNet normalization from sqrt(sum(q*q))+epsilon to the installed
+Transformers reference's sqrt(sum(q*q)+epsilon). A low-norm official-kernel
+golden fails before correction (error0.08847). The original tiny hidden
+engineering gate fails even without replay and remains recorded. SAME
+inputs/reference and unchanged1e-4 threshold pass after correction (maximum
+hidden error7.153e-7), with tiny9/9, ordinary60/60 and real5/5 global reference
+agreement and194 native tests. Zero replay is bit-identical. Real float16
+reference hidden differences up to0.03407 remain descriptive. This is an
+intentional default-kernel correction and an opt-in final-query embedding
+replay hook, not admitted semantic transfer. The original native binary
+SHA90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
+old archives/results remain unchanged. Old coalition/admission counts do
+not establish counts on the corrected computation; future studies must
+capture and certify their own actual carriers. No fresh transfer prompts
+have run. [Failures, protocol, correction and verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-replay/experiments/pdc_qwen35_replay_engineering).

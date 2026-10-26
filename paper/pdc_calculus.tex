@@ -512,6 +512,23 @@ confirmation follows. No model call or learned frame is used. See
 \path{fieldrun/experiments/pdc_qwen35_coalitions/PREREG.md},
 \path{RESULTS.md}, \path{results.json}, and \path{verification.json}.
 
+\status{empirical, engineering correction} Replay-hook validation exposes
+native DeltaNet using $\sqrt{\sum q^2}+\varepsilon$ instead of the installed
+reference's $\sqrt{\sum q^2+\varepsilon}$. A low-norm official-kernel golden
+fails before correction (error 0.08847). The initial tiny hidden-state gate
+fails even without replay and is retained. Identical inputs and unchanged
+$10^{-4}$ tolerance pass after correction (maximum error
+$7.153\cdot10^{-7}$); tiny replay 9/9, ordinary reference 60/60, real
+engineering 5/5 global predictions and 194 native tests pass. Zero replay
+is bit-identical; real float16-reference hidden differences (up to 0.03407)
+are descriptive. This intentionally changes the default kernel and adds an
+opt-in final-query embedding intervention; it is not admitted semantic
+transfer. Old archives/binaries remain unchanged and their coalition counts
+do not establish counts on the corrected computation. No fresh transfer
+prompt has run. See fieldrun PR\#149 and
+\path{experiments/pdc_qwen35_replay_engineering/RESULTS.md},
+\path{NORMALIZATION_CORRECTION.md} and corrected verification files.
+
 Every \status{proved} statement above names its checked theory and lemma;
 every \status{empirical} claim names a preregistration and run. Concrete
 floating-point data checks are distinguished from symbolic kernel theorems.
