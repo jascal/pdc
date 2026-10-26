@@ -87,3 +87,12 @@ Depends on the original Qwen release; weights/environments remain external.
 
 [Control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1):39 verified payload files,93344761 bytes;
 SHA-256 `b4196b098f5d673f4418ed5f2b9dd0bc78d762f8f75b9bbb61db29c0ff5d10ad`. Previous releases are unchanged.
+
+
+## v0.16 fixed native coalitions (empirical, saved development data)
+
+[Protocol/results/checks](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_coalitions): prereg d4a6d6f,2091 fixed bodies including all2080 pairs,209100 verdicts. No pair passes. Last8 exact5/100 and centered0/100: compact gate inconclusive against20/100 bar. Last16 exact77/100 and centered29/100; last32 exact100/100 and centered99/100. All five compact cases are sum-one facts across known wordings. Independent raw-vector reconstruction passes all metrics within3.49e-13 and17 frozen hashes. Covered-score passage only; no causal replay, backbone pruning, global minimality, fresh confirmation or new model call.
+
+[Full coalition metrics](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-coalitions-v1):16 verified payload files,4942886 bytes;
+SHA-256 `4ec2b1e5faa6b559145c3dddad602572a98fb600e5027d57312cdd66270b5ada`. Original Qwen and memory-learning releases supply inputs;
+converted model frame/weights and environments remain external.

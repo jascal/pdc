@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current evidence version: **v0.15**. R5 retired the epistemic claim;
+Current evidence version: **v0.16**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -122,3 +122,9 @@ fresh confirmation. Correct/empty baselines remain27/27 and12/27.
 
 [Memory-control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1) contains all new captures and reference
 outputs, with a per-file verified manifest.
+
+
+v0.16 records a frozen saved-frame coalition diagnostic: no native pair
+passes, last8 contributions pass exact5/100 (compact gate inconclusive),
+and last16 pass77/100 exact and29/100 centered. Larger-group passage
+does not establish replay, pruning or fresh generalization.

@@ -1,7 +1,7 @@
-# Grok review and next-direction prompt after Qwen v0.15
+# Grok review and next-direction prompt after Qwen v0.16
 
 Review PDC PR #1, fieldrun PR #148 (stacked on #147), PIL PR #155 and
-i-orca PR #37 as one research change. Start from the v0.15 paper, evidence
+i-orca PR #37 as one research change. Start from the v0.16 paper, evidence
 map, Qwen memory PREREG/RESULTS, PIL Qwen learning protocol/outcome, and
 independent endpoint and chart audits. The supplemental
 `pdc-qwen35-memory-learning-v1` release contains raw data and frames and
@@ -34,3 +34,14 @@ certificate-to-truth claims, treat frozen-budget failure as impossibility,
 retune these completed runs, or substitute another constructed positive
 control for a real-model memory result. Explain why the proposed result,
 positive or negative, would change the next decision.
+
+
+Latest fixed-coalition diagnosis (v0.16):2091 predeclared bodies on100 known
+development frames, no model calls or learning. All2080 pairs fail. Last8
+contributions pass exact5/100 and centered0/100: compact gate inconclusive
+against20/100 bar. Last16 pass77/100 exact and29/100 centered; last32 pass
+100/100 and99/100. All209100 verdicts independently reconstructed within
+3.49e-13 and17 frozen hashes verified. Larger-group passage is not backbone
+pruning, global minimum coalition size or actual memory transfer. Do not
+base the next recommendation on the now-false premise that all native
+groups refuse; distinguish larger fixed groups from compact<=8 bodies.

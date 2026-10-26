@@ -1,8 +1,20 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.15). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.16). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
+
+> **v0.16 (2026-10-26)** — **empirical**, a separately frozen native-
+> coalition diagnostic evaluates all2080 pairs, ten fixed prefix/suffix
+> groups, and full65 on100 saved development frames. No pair passes.
+> Last8 contributions pass exact5/100, centered0/100; the compact<=8
+> gate is inconclusive (positive bar20/100). Last16 pass77/100 exact and
+>29/100 centered; last32 pass100/100 and99/100. Larger-group passage is
+> covered-score evidence, not actual residual replay, pruning or minimality.
+> All209100 verdicts independently reconstructed, maximum error3.49e-13;
+>17 frozen hashes pass. No model call, learning, threshold change or fresh
+> confirmation. Stop after the fixed diagnostic; no automatic wider search.
+> [Protocol/results](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_coalitions).
 
 > **v0.15 (2026-10-26)** — **empirical**, a separately preregistered
 > development diagnostic adds two one-token controls to the same27 known
