@@ -512,6 +512,7 @@ confirmation follows. No model call or learned frame is used. See
 \path{fieldrun/experiments/pdc_qwen35_coalitions/PREREG.md},
 \path{RESULTS.md}, \path{results.json}, and \path{verification.json}.
 
+\clearpage
 \status{empirical, engineering correction} Replay-hook validation exposes
 native DeltaNet using $\sqrt{\sum q^2}+\varepsilon$ instead of the installed
 reference's $\sqrt{\sum q^2+\varepsilon}$. A low-norm official-kernel golden
@@ -540,7 +541,5 @@ isabelle build -o timeout=40 -d i-orca/examples/pic\_core -D i-orca/examples/pdc
 Native capture commands, independent NumPy checks, the solver-free R4
 verifier, and the R5 bundle/theory auditors are listed in the corresponding
 result documents. The finite executor and certificate/theory tests pass.
-The paper and companion changes are published as review PRs with versioned
-evidence releases; merging remains pending. R8-H is a measured negative coverage arm; no unperformed or failed positive gate
-is counted as completed by this paper.
+
 \end{document}
