@@ -1,9 +1,20 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.11). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.12). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
 
+> **v0.12 (2026-10-25)** — a user-authorized Qwen3.5-4B follow-up
+> has 100/100 correct host answers and 50/50 correct heldout commitments
+> for each readout. Every witness is the full source program. The independent
+> reference matches 100/100; 678300 body/probe annotations and 200 commitments
+> pass the independent audit. This is full-program coverage on a small
+> instruction-template split, not compact circuits, memory transfer, learned
+> admission, hallucination reduction over its already-perfect host, or compute
+> savings. Model/architecture/tokenizer/chat format all differ from GPT-2.
+> [Protocol and outcome](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_4b).
+> Original GPT-2 negatives and the consumed-slice restriction remain intact.
+>
 > **v0.11 (2026-10-25)** — a separately frozen, saved-frame R7 diagnostic
 > compares original singleton admission, half absolute floor, highest-source
 > plus bias, and random-source plus bias procedures. Every arm remains 0/75

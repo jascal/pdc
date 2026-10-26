@@ -1,4 +1,4 @@
-# PDC v0.11 evidence map
+# PDC v0.12 evidence map
 
 This is a **stopped-stage review**, not a passing north-star claim.
 The original evidence snapshot is hosted in the [GitHub prerelease](https://github.com/jascal/pdc/releases/tag/pdc-v0.10-evidence). Paths below are relative to the shared workspace root.
@@ -40,6 +40,7 @@ confirmatory experiment requires fresh held-out data.
 | empirical saved-frame diagnostic, negative | four arms each 0/75 at three endpoints; nine matching singleton decisions, zero strict drift passes | pil/docs/notes/pdc_r7_diagnostic_{prereg,outcome}.md; results/pdc_r7_diagnostic/{results,verification}.json; experiments/verify_pdc_r7_diagnostic.py; follow-up to original archive |
 | empirical R8-H, negative | actual row savings, zero coverage on 75 | fieldrun/experiments/pdc/{R8H_PREREG.md,R8H_RESULTS.md,r8h_results.json}; scripts/pdc_service_audit.py |
 | empirical final heldout, negative | unchanged policy, zero coverage on reserved 25; NumPy 25/25 | fieldrun/experiments/pdc/{FINAL_AUDIT_PREREG.md,FINAL_AUDIT_RESULTS.md}; final_audit/{manifest,results,reference_verification}.json; scripts/pdc_final_audit_check.py |
+| empirical Qwen3.5-4B follow-up, full-program positive | host 100/100; each readout 50/50 correct heldout commitments; all witnesses full; independent reference 100/100 | fieldrun/experiments/pdc_qwen35_4b/{PREREG,RESULTS}.md; results.json, verification.json; scripts/pdc_qwen35_bundle_check.py; supplemental release pdc-qwen35-4b-v1 |
 
 Build the strict proof session from the workspace root:
 

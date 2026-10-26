@@ -393,6 +393,39 @@ threshold, body-generator or checkpoint selection. A new confirmatory
 experiment requires fresh held-out data. R8 and criterion 9 remain unmet; this
 paper documents a stopped stage rather than achievement of the north star.
 
+\status{empirical, stronger-model follow-up} A separately frozen,
+user-authorized Qwen3.5-4B comparison uses 100 new chat inputs, split by
+instruction wording into 50 development and 50 heldout cases. Both splits
+reuse the same 25 arithmetic facts; this is not an unseen-fact test.
+The host is correct on 100/100, and both readouts commit correctly on all
+50 heldout cases with no abstention or hallucination. Every winning
+witness is the full source program; neither the attention nor MLP body
+wins. Thus this is nonzero full-program coverage, not a compact sufficient
+circuit or a learned-admission result. Since the uncertified host is also
+always correct, no hallucination reduction over that baseline is measured.
+No native output rows, positions or layers are skipped.
+
+The pinned checkpoint is \path{Qwen/Qwen3.5-4B} revision
+\path{851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a}, with float16 weights,
+CPU inference and thinking disabled. The new model, architecture, tokenizer
+and chat format prevent attribution to parameter count alone. Captured
+embedding plus attention/MLP writes give 65 sources; RMS folding uses the
+observed full-host scale with $1+w$, without mean subtraction or bias.
+DeltaNet is not identified with ordinary softmax read-PIC. The fixed query
+has nine digit atoms; certificate coverage is 2261 tokenizer-text probes,
+while the native host scores all 248320 output rows. The original three
+bodies, $T=1$, $\gamma=0.5$ and exact pairwise guard are retained.
+
+Independent Transformers verification matches all 100 host winners. The
+independent auditor reconstructs 678300 body/probe annotations and 200
+readout commitments, with maximum discrepancy $1.60\cdot10^{-14}$.
+Native scientific and independent verification budgets are 100 forwards
+each. Original GPT-2 negatives, archive and the consumed final-25 ban are
+unchanged. See \path{fieldrun/experiments/pdc_qwen35_4b/PREREG.md},
+\path{RESULTS.md}, \path{results.json}, and \path{verification.json}.
+This comparison meets its local gates; it does not close R8, two-hop
+transfer or the full north star.
+
 Every \status{proved} statement above names its checked theory and lemma;
 every \status{empirical} claim names a preregistration and run. Concrete
 floating-point data checks are distinguished from symbolic kernel theorems.

@@ -19,3 +19,10 @@ page was visually inspected. Every proved claim points to a named i-orca
 theory/lemma; empirical claims point to their preregistration and result files.
 The experiment artifacts stay in fieldrun/pil, with no executable experiment
 or Isabelle source imported into this repo.
+
+
+The v0.12 Qwen3.5-4B follow-up is included in the current paper: both
+readouts commit correctly on all 50 heldout cases, with only full-program
+witnesses. This does not establish compact circuits, learning, multi-hop
+memory, hallucination reduction over its perfect baseline or compute savings.
+See fieldrun PR #148 and the separate `pdc-qwen35-4b-v1` evidence release.

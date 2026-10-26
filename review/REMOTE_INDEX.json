@@ -24,6 +24,19 @@
   "scope": "reviewable stopped-stage results; scientific goal remains incomplete",
   "reviewer_invocation": "not invoked; user-ready prompts in GROK_REVIEW.md",
   "archive_scope": "original audited snapshot; PRs add publication documentation",
-  "spec_version": "0.11",
-  "followup": "Saved-frame diagnostic is committed to PIL PR #155; original v0.10 archive unchanged."
+  "spec_version": "0.12",
+  "followup": "Saved-frame diagnostic is committed to PIL PR #155; original v0.10 archive unchanged.",
+  "followups": [
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "pr": "https://github.com/jascal/fieldrun/pull/148",
+      "commit": "fcd76cb92ca106ea4fb12e1014088e3496204f1c",
+      "release": "https://github.com/jascal/pdc/releases/tag/pdc-qwen35-4b-v1",
+      "archive_bytes": 217284002,
+      "archive_sha256": "98cd33d677bd5a6021a8825887714a79e21aa08b97ac755d1b769a167dfecf24",
+      "result": "100/100 host correct, both readouts 50/50 correct heldout commitments, all witnesses full source program",
+      "scope": "no compact-circuit, memory, learned-admission, hallucination-reduction or compute-saving claim"
+    }
+  ]
 }

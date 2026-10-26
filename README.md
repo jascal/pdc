@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current stopped-stage version: **v0.11**. R5 retired the epistemic claim;
+Current evidence version: **v0.12**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -86,3 +86,13 @@ all four procedures retain 0/75 admissions at three endpoints. Nine contexts
 have matching singleton decisions without the stronger certificate; none
 passes its centered-tail drift premise. This is not fresh confirmation or
 a claim that larger coalitions cannot work. The v0.10 archive is unchanged.
+
+
+The [Qwen3.5-4B follow-up](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_4b)
+has 100/100 correct host answers and 50/50 correct heldout commitments for
+both readouts. All witnesses use the full source program. This is a local
+positive with no compact-circuit, learned-admission, compute-saving or
+hallucination-reduction claim. It does not erase the GPT-2 negative results.
+Supplemental evidence: [Qwen release](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-4b-v1).
+
+Qwen follow-up implementation/review: [fieldrun #148](https://github.com/jascal/fieldrun/pull/148).
