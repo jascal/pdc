@@ -1,9 +1,21 @@
 # PDC: Projective Derivation Calculus — Definition
 
-**Status:** canonical specification (v0.12). This document defines PDC precisely enough that a later
+**Status:** canonical specification (v0.13). This document defines PDC precisely enough that a later
 proof in i-orca, or a later measurement in fieldrun or pil, has a statement to land on. It is a
 formalism repo in the PIC family. It holds no code and no proofs.
 
+> **v0.13 (2026-10-25)** — a separately frozen Qwen saved-source
+> diagnostic finds a singleton with the same covered argmax in 100/100 cases,
+> but zero exact-pairwise or centered-tail admissions. In 97/100 a singleton
+> also exceeds the0.5 absolute margin floor. Independent verification checks
+> all 6500 source verdicts (max discrepancy 5.69e-14). The new kernel lemma
+> `pairwise_gap_guard_iff` identifies the guard's relative-gap requirement:
+> abs(h-p)<p iff 0<h<2p. This is a sufficient score certificate, not mere
+> argmax agreement or causal adequacy. Larger coalitions/replay remain untested;
+> this saved-data analysis is not fresh confirmation. Full-program coverage
+> in v0.12 remains unchanged.
+> [Diagnostic](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_singletons).
+>
 > **v0.12 (2026-10-25)** — a user-authorized Qwen3.5-4B follow-up
 > has 100/100 correct host answers and 50/50 correct heldout commitments
 > for each readout. Every witness is the full source program. The independent

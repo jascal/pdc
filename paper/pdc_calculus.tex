@@ -426,6 +426,27 @@ unchanged. See \path{fieldrun/experiments/pdc_qwen35_4b/PREREG.md},
 This comparison meets its local gates; it does not close R8, two-hop
 transfer or the full north star.
 
+\status{empirical, singleton diagnostic} A separately frozen saved-data
+analysis scores all 65 native Qwen sources on all 100 existing contexts.
+Every context has a singleton selecting the host target on the 2261 probes;
+in 97 a singleton also exceeds the absolute margin floor 0.5. Nevertheless,
+exact pairwise and centered-tail admission are both 0/100. An independent
+torch/alternative-algebra checker confirms all 6500 source verdicts within
+$5.69\cdot10^{-14}$. No new model call, larger coalition, threshold sweep,
+learning or replay occurs. This is not fresh held-out confirmation.
+See \path{fieldrun/experiments/pdc_qwen35_singletons/PREREG.md},
+\path{RESULTS.md}, \path{results.json}, and \path{verification.json}.
+
+\status{proved} For a host gap $h$ and body gap $p$, the guard
+$|h-p|<p$ is equivalent to $0<h<2p$, as checked by
+\path{PDC_Admission.pairwise_gap_guard_iff}. Thus agreement of positive
+gaps alone is weaker: the body must supply more than half the host gap
+against every covered rival. This identifies a sufficient guard's relative
+scale requirement; it proves neither necessity for matching decisions nor
+causal sufficiency of an observed source. The original full-program positive
+and fixed-singleton negative are distinct results; no impossibility or
+certificate-to-truth claim follows.
+
 Every \status{proved} statement above names its checked theory and lemma;
 every \status{empirical} claim names a preregistration and run. Concrete
 floating-point data checks are distinguished from symbolic kernel theorems.

@@ -61,7 +61,7 @@ transfer remain unestablished.
 Apache License 2.0 — see [`LICENSE`](./LICENSE).
 
 
-Current evidence version: **v0.12**. R5 retired the epistemic claim;
+Current evidence version: **v0.13**. R5 retired the epistemic claim;
 R7 did not increase admission; the final 25-context diagnostic audit has
 zero service coverage. The full north star is not achieved. The spec and
 paper preserve these negative outcomes. The paper/spec are proposed in the central review PR; companion code/proof PRs
@@ -96,3 +96,9 @@ hallucination-reduction claim. It does not erase the GPT-2 negative results.
 Supplemental evidence: [Qwen release](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-4b-v1).
 
 Qwen follow-up implementation/review: [fieldrun #148](https://github.com/jascal/fieldrun/pull/148).
+
+
+The [saved-source singleton diagnostic](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_singletons)
+finds matching singleton decisions in 100/100 cases but 0 admissions under
+both sufficient guards. This separates source alignment from the stronger
+certificate; it does not test larger coalitions or causal replay.
