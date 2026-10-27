@@ -72,6 +72,7 @@ changes; default-branch links become current only after merging.
 
 ## Review and evidence
 
+- [PR readiness and dependency order](review/PR_READINESS.md)
 - [Grok review and next-direction prompts](review/GROK_REVIEW.md)
 - [Claim-to-evidence map](spec/EVIDENCE.md)
 - [Original goal](review/ORIGINAL_GOAL.md) and [requirements audit](review/REQUIREMENTS_AUDIT.md)

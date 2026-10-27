@@ -1,7 +1,7 @@
 # Grok review and next-direction prompt after Qwen v0.17
 
-Review PDC PR #1, fieldrun PR #148 (stacked on #147), PIL PR #155 and
-i-orca PR #37 as one research change. Start from the v0.17 paper, evidence
+Review PDC PR #1, fieldrun PR #147, PR #148 (stacked on #147),
+PR #149 (stacked on #148), PIL PR #155 and i-orca PR #37 as one research change. Start from the v0.17 paper, evidence
 map, Qwen memory PREREG/RESULTS, PIL Qwen learning protocol/outcome, and
 independent endpoint and chart audits. The supplemental
 `pdc-qwen35-memory-learning-v1` release contains raw data and frames and

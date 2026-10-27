@@ -1,17 +1,25 @@
 # Grok review and next research direction
 
-The central PDC paper/spec PR links three companion PRs. Review all four
-before recommending a new experiment. These changes are proposed, not merged.
+The central PDC paper/spec PR links five companion PRs. Review all six
+as one research change. These changes are proposed, not merged.
 No automatic Grok review has been invoked by this document.
 
 - Central paper/spec PR: https://github.com/jascal/pdc/pull/1
 - Runtime, chart/service code and small results: https://github.com/jascal/fieldrun/pull/147
+- Archived Qwen follow-up: https://github.com/jascal/fieldrun/pull/148
+- Normalization correction and replay engineering: https://github.com/jascal/fieldrun/pull/149
 - Admission oracle and guarded learning: https://github.com/jascal/pil/pull/155
 - Strict Isabelle proofs: https://github.com/jascal/i-orca/pull/37
 - Paper PDF: https://github.com/jascal/pdc/blob/research/pdc-stopped-stage/paper/pdc_calculus.pdf
 - Original goal: https://github.com/jascal/pdc/blob/research/pdc-stopped-stage/review/ORIGINAL_GOAL.md
 - Evidence map: https://github.com/jascal/pdc/blob/research/pdc-stopped-stage/spec/EVIDENCE.md
 - Full original code/results/paper snapshot: https://github.com/jascal/pdc/releases/tag/pdc-v0.10-evidence
+
+Current review status and stack: [PR readiness](PR_READINESS.md). Fieldrun
+#148 is based on #147; #149 is based on #148. PIL #155 and i-orca #37 have
+independent bases. The latest Qwen evidence and next-direction prompt are in
+[QWEN_NEXT_DIRECTION.md](QWEN_NEXT_DIRECTION.md). This review preparation does
+not authorize an experiment or a merge.
 
 The 596 MB archive contains complete captures and frames omitted from git;
 per-repo PDC_ARTIFACTS.md files map archive paths to hashes. Model weights
@@ -22,7 +30,7 @@ retuned during publication.
 
 ## Prompt 1: critical review
 
-Please review the central PDC paper/spec PR and its three linked implementation
+Please review the central PDC paper/spec PR and its five linked companion
 PRs as one research change. Give severity-ranked, actionable findings with
 exact file/line or theorem references. Separate implementation bugs, proof
 scope mismatches, experimental validity concerns and unsupported claims.
@@ -59,7 +67,7 @@ purpose is useful, checkable transformer reasoning charts, not publishing
 for its own sake. Decide what experiment would most change our belief that
 this approach can become useful.
 
-Current evidence:
+Original GPT-2 stage evidence (the latest Qwen evidence is linked above):
 - The one-body seam and admission guards are kernel checked. Those theorems
   preserve covered score decisions, not truth.
 - R4's intended negative Qwen premise fails: 80/80 free-frame reducible;
