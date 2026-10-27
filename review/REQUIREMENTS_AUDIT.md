@@ -45,8 +45,10 @@ extension/sweeps after its fixed-budget negative result. A new model,
 policy, objective or new confirmatory data would require an explicit new
 preregistration and a revised scientific claim; it cannot retroactively
 pass this program's failed gates. Preserve these outcomes in the stopped-
-stage paper and reviewable artifacts. Public release needs a concrete
-repository/artifact destination; no public stop has yet been published.
+stage paper and reviewable artifacts.
+
+> **Pre-publication record (25 October 2026):** Public release needs a concrete
+> repository/artifact destination; no public stop has yet been published.
 
 ## R9 review inventory verified
 
@@ -59,9 +61,11 @@ not the scientific claims. Corrected stale present-tense statements about
 unperformed R7 and untouched heldout data; historical version notes remain
 historical. The six-page paper rebuilds cleanly after these corrections.
 
-Publication discovery: PDC has no configured git remote and `gh repo view
-jascal/pdc` reports that the repository cannot be resolved. A destination
-question is pending; no remote repository has been created and no files
-have been publicly published. This is the first publication-destination
-blocker observation; meaningful local R9 review work was completed in this
-turn. The original objective remains active and incomplete.
+> **Pre-publication record (25 October 2026):**
+>
+> Publication discovery: PDC has no configured git remote and `gh repo view
+> jascal/pdc` reports that the repository cannot be resolved. A destination
+> question is pending; no remote repository has been created and no files
+> have been publicly published. This is the first publication-destination
+> blocker observation; meaningful local R9 review work was completed in this
+> turn. The original objective remains active and incomplete.

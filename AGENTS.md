@@ -16,7 +16,8 @@ PDC does not replace it and does not edit it.
 
 - `spec/PDC_SPEC.md` — **the single source of truth.** Strata, native notation, the specialization
   lemma (now proved in the cited R0 scope), crystallization, the external judgment, the open list.
-- `paper/pdc_calculus.tex` — a stopped-stage R0–R8 write-up. It does not close R9.
+- `paper/pdc_calculus.tex` — a draft recording the R0–R8 stop and the later Qwen follow-up
+  through the engineering correction. It does not close R9.
 
 ## The discipline that must not slip
 

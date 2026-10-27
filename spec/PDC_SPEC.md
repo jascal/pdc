@@ -399,7 +399,7 @@ admit `a ↷ s`: the atom may be used as a source `s` whose write, on this posit
 the coalition `P`. The side condition is the hypothesis of PIC's margin certificate
 (`pic/spec/PIC_SPEC.md` §5.5, `decode_margin_certified`, *proved in i-orca for the token-logit
 statement*). The source-admission packaging is now **proved** in i-orca
-[`PDC_Admission.thy`](https://github.com/jascal/i-orca/blob/master/examples/pdc/PDC_Admission.thy):
+[`PDC_Admission.thy`](https://github.com/jascal/i-orca/blob/research/pdc-stopped-stage/examples/pdc/PDC_Admission.thy):
 `admitted_source_preserves_decision` handles an offset-centered approximation,
 `pic.crystallization_admitted_write` instantiates it for a residual source, and
 `pic.crystallization_complement_certified` proves the displayed omitted-coalition form.
@@ -531,8 +531,9 @@ vocabulary argmax.
 model, domain, prompts, body program and threshold. High margin is not an epistemic
 instrument there. A later service arm may advertise measured host agreement only;
 it may not advertise theory soundness from this certificate. This is a scoped
-negative result, not a theorem about every model or certificate. Completeness and
-the full held-out north star remain **open**. No threshold was retuned after the miss.
+negative result, not a theorem about every model or certificate. The v0.10 audit
+consumed the reserved 25 contexts and both readouts abstained on all 25; R8 and
+criterion 9 are **unmet on this sample**. No threshold was retuned after the miss.
 
 Student certificates in the PIC record (PIC §5.8) are sound for a student and can be false of the
 host. PDC's `⊨` is a third target, beside host agreement and student agreement. A certificate names
@@ -579,7 +580,7 @@ In the order a formalization could actually proceed.
    specific form in v0.1, because PIC's step function is abstract and a sharp conjecture would pretend
    otherwise.
 
-7. **Online service (empirical diagnostic, positive gate open).** R8-H is the
+7. **Online service (empirical diagnostic, positive gate unmet).** R8-H is the
    host-only continuation permitted after R5's stop. A live native CLI computes
    fresh sources and scores only 1,703 fixed lexical probe rows; every response
    retains the body/readout artifact or an explicit abstention. Against a full
@@ -657,15 +658,15 @@ section and bump the version. Do not bump PIC for a PDC change.*
 [Fieldrun PR#149](https://github.com/jascal/fieldrun/pull/149) corrects
 DeltaNet normalization from sqrt(sum(q*q))+epsilon to the installed
 Transformers reference's sqrt(sum(q*q)+epsilon). A low-norm official-kernel
-golden fails before correction (error0.08847). The original tiny hidden
+golden fails before correction (error 0.08847). The original tiny hidden
 engineering gate fails even without replay and remains recorded. SAME
-inputs/reference and unchanged1e-4 threshold pass after correction (maximum
-hidden error7.153e-7), with tiny9/9, ordinary60/60 and real5/5 global reference
-agreement and194 native tests. Zero replay is bit-identical. Real float16
-reference hidden differences up to0.03407 remain descriptive. This is an
+inputs/reference and unchanged 1e-4 threshold pass after correction (maximum
+hidden error 7.153e-7), with tiny 9/9, ordinary 60/60 and real 5/5 global reference
+agreement and 194 native tests. Zero replay is bit-identical. Real float16
+reference hidden differences up to 0.03407 remain descriptive. This is an
 intentional default-kernel correction and an opt-in final-query embedding
 replay hook, not admitted semantic transfer. The original native binary
-SHA90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
+SHA 90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
 old archives/results remain unchanged. Old coalition/admission counts do
 not establish counts on the corrected computation; future studies must
 capture and certify their own actual carriers. No fresh transfer prompts

@@ -10,7 +10,7 @@
 \newcommand{\bracket}[2]{\lbrack #1\rbrack(#2)}
 \title{Projective Derivation Calculus:\\Checked Readouts and a Failed Truth Test}
 \author{Working draft}
-\date{October 25, 2026}
+\date{26 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -30,7 +30,17 @@ answers and 9/10 marginal answers are false in the finite theory.
 The margin certificate preserves a covered score decision; that property
 does not establish truth on this domain. Admission learning is negative,
 and the final held-out service audit has zero coverage. Admitted-memory
-transfer and useful service remain unestablished. This paper
+transfer and useful service remain unestablished. In a Qwen3.5-4B follow-up,
+the host was correct on 100/100 cases and both readouts committed correctly
+on 50/50 held-out cases; every witness is the full source program,
+and both splits reuse the same 25 facts. These counts and the later
+singleton, memory, learning and coalition counts are observations of
+archived native binary SHA-256
+\path{90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d}.
+That binary used $\sqrt{\sum q^2}+\varepsilon$, whereas the installed
+Transformers reference uses $\sqrt{\sum q^2+\varepsilon}$; fieldrun
+PR~149 contains the correction. No fresh transfer prompt has run, and the
+old counts do not establish counts on the corrected runtime. This paper
 records the stopped stage and does not claim the full program is complete.
 \end{abstract}
 
@@ -360,10 +370,10 @@ baseline and 12.871 for subset service; these descriptive timings do not
 establish a general speedup. The runtime also serves a single named
 non-held-out request and rejects a reserved request before execution.
 The final audit below subsequently consumed the 25 reserved contexts. R8's original useful
-truth/host service gate is \status{open}; theory soundness is not advertised
+truth/host service gate is \status{unmet}; theory soundness is not advertised
 from the failed margin instrument.
 
-\status{open} This working paper records R0--R8 outcomes after the stop, including
+\status{stopped-stage} This working paper records R0--R8 outcomes after the stop, including
 negative R7 and the final held-out diagnostic. It provides a stopped-stage
 evidence map in \path{pdc/spec/EVIDENCE.md}, not a passing R0--R8 program
 or criterion-9 result. The complete north star remains

@@ -16,7 +16,7 @@ confounded. Baseline charts still commit 14 hallucinations among 25 answers.
 Both 200-proposal learning arms retain 0/100 admissions and all 208 protected
 host decisions, including 30 wrong second-hop decisions. Endpoints were
 independently reconstructed; intermediate trajectories were not saved.
-A separately preregistered development control now finds period9/27 correct and wrong-digit0/27 correct, with27/27 following the wrong supplied intermediate; independent reference54/54 and input/count/hash audit pass. This supports supplied-digit sensitivity, without an exclusive internal-mechanism or fresh-confirmation claim. No actual admitted residual replay occurred. Original R5 claims remain
+A separately preregistered development control now finds period 9/27 correct and wrong-digit 0/27 correct, with 27/27 following the wrong supplied intermediate; independent reference 54/54 and input/count/hash audit pass. This supports supplied-digit sensitivity, without an exclusive internal-mechanism or fresh-confirmation claim. No actual admitted residual replay occurred. Original R5 claims remain
 retired; the original final 25-context slice is consumed, and all 100 Qwen
 first-hop cases are now development data.
 
@@ -36,15 +36,15 @@ control for a real-model memory result. Explain why the proposed result,
 positive or negative, would change the next decision.
 
 
-Latest fixed-coalition diagnosis (v0.16):2091 predeclared bodies on100 known
-development frames, no model calls or learning. All2080 pairs fail. Last8
-contributions pass exact5/100 and centered0/100: compact gate inconclusive
-against20/100 bar. Last16 pass77/100 exact and29/100 centered; last32 pass
-100/100 and99/100. All209100 verdicts independently reconstructed within
-3.49e-13 and17 frozen hashes verified. Larger-group passage is not backbone
+Latest fixed-coalition diagnosis (v0.16): 2091 predeclared bodies on 100 known
+development frames, no model calls or learning. All 2080 pairs fail. Last 8
+contributions pass exact 5/100 and centered 0/100: compact gate inconclusive
+against 20/100 bar. Last 16 pass 77/100 exact and 29/100 centered; last 32 pass
+100/100 and 99/100. All 209100 verdicts independently reconstructed within
+3.49e-13 and 17 frozen hashes verified. Larger-group passage is not backbone
 pruning, global minimum coalition size or actual memory transfer. Do not
 base the next recommendation on the now-false premise that all native
-groups refuse; distinguish larger fixed groups from compact<=8 bodies.
+groups refuse; distinguish larger fixed groups from compact <= 8 bodies.
 
 
 Latest engineering prerequisite:
@@ -53,16 +53,21 @@ Latest engineering prerequisite:
 [Fieldrun PR#149](https://github.com/jascal/fieldrun/pull/149) corrects
 DeltaNet normalization from sqrt(sum(q*q))+epsilon to the installed
 Transformers reference's sqrt(sum(q*q)+epsilon). A low-norm official-kernel
-golden fails before correction (error0.08847). The original tiny hidden
+golden fails before correction (error 0.08847). The original tiny hidden
 engineering gate fails even without replay and remains recorded. SAME
-inputs/reference and unchanged1e-4 threshold pass after correction (maximum
-hidden error7.153e-7), with tiny9/9, ordinary60/60 and real5/5 global reference
-agreement and194 native tests. Zero replay is bit-identical. Real float16
-reference hidden differences up to0.03407 remain descriptive. This is an
+inputs/reference and unchanged 1e-4 threshold pass after correction (maximum
+hidden error 7.153e-7), with tiny 9/9, ordinary 60/60 and real 5/5 global reference
+agreement and 194 native tests. Zero replay is bit-identical. Real float16
+reference hidden differences up to 0.03407 remain descriptive. This is an
 intentional default-kernel correction and an opt-in final-query embedding
 replay hook, not admitted semantic transfer. The original native binary
-SHA90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
+SHA 90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
 old archives/results remain unchanged. Old coalition/admission counts do
 not establish counts on the corrected computation; future studies must
 capture and certify their own actual carriers. No fresh transfer prompts
 have run. [Failures, protocol, correction and verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-replay/experiments/pdc_qwen35_replay_engineering).
+
+This documentation pass does not authorize an experiment: a later study must
+freeze the corrected runtime, capture and certify its own carriers, and use
+fresh prompts; it must not pool archived coalition or admission counts into
+that study.

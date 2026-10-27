@@ -1,4 +1,4 @@
-# PDC v0.13 evidence map
+# PDC v0.17 evidence map
 
 This is a **stopped-stage review**, not a passing north-star claim.
 The original evidence snapshot is hosted in the [GitHub prerelease](https://github.com/jascal/pdc/releases/tag/pdc-v0.10-evidence). Paths below are relative to the shared workspace root.
@@ -42,7 +42,11 @@ confirmatory experiment requires fresh held-out data.
 | empirical R8-H, negative | actual row savings, zero coverage on 75 | fieldrun/experiments/pdc/{R8H_PREREG.md,R8H_RESULTS.md,r8h_results.json}; scripts/pdc_service_audit.py |
 | empirical final heldout, negative | unchanged policy, zero coverage on reserved 25; NumPy 25/25 | fieldrun/experiments/pdc/{FINAL_AUDIT_PREREG.md,FINAL_AUDIT_RESULTS.md}; final_audit/{manifest,results,reference_verification}.json; scripts/pdc_final_audit_check.py |
 | empirical Qwen3.5-4B follow-up, full-program positive | host 100/100; each readout 50/50 correct heldout commitments; all witnesses full; independent reference 100/100 | fieldrun/experiments/pdc_qwen35_4b/{PREREG,RESULTS}.md; results.json, verification.json; scripts/pdc_qwen35_bundle_check.py; supplemental release pdc-qwen35-4b-v1 |
-| empirical Qwen singleton diagnostic, negative |100/100 matching covered singleton decisions, 97 floor passes, 0 exact/centered admissions; 6500 verified sources | fieldrun/experiments/pdc_qwen35_singletons/{PREREG,RESULTS}.md, results.json, verification.json; scripts/pdc_qwen35_singletons_check.py; not fresh confirmation |
+| empirical Qwen singleton diagnostic, negative | 100/100 matching covered singleton decisions, 97 floor passes, 0 exact/centered admissions; 6500 verified sources | fieldrun/experiments/pdc_qwen35_singletons/{PREREG,RESULTS}.md, results.json, verification.json; scripts/pdc_qwen35_singletons_check.py; not fresh confirmation |
+
+The v0.12 through v0.16 Qwen counts belong to archived native binary SHA-256
+`90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d`
+and are not corrected-runtime counts.
 
 Build the strict proof session from the workspace root:
 
@@ -83,17 +87,17 @@ Depends on the original Qwen release; weights/environments remain external.
 
 ## v0.15 memory-content controls (empirical, development only)
 
-[Protocol, results and independent verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_memory_controls): published preregistration efa57e0 before inference;54 unique new inputs on27 known triples. Period9/27 correct; wrong digit0/27 correct and27/27 following-wrong. Reused empty/correct-digit baselines12/27 and27/27. Independent reference54/54 and23 frozen hashes pass. Predeclared content-sensitivity bar passes, neutral-improvement bar fails. No exclusive internal mechanism, admitted replay, fresh confirmation, body search, service saving or epistemic revival.
+[Protocol, results and independent verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_memory_controls): published preregistration efa57e0 before inference; 54 unique new inputs on 27 known triples. Period 9/27 correct; wrong digit 0/27 correct and 27/27 following-wrong. Reused empty/correct-digit baselines 12/27 and 27/27. Independent reference 54/54 and 23 frozen hashes pass. Predeclared content-sensitivity bar passes, neutral-improvement bar fails. No exclusive internal mechanism, admitted replay, fresh confirmation, body search, service saving or epistemic revival.
 
-[Control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1):39 verified payload files,93344761 bytes;
+[Control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1): 39 verified payload files, 93344761 bytes;
 SHA-256 `b4196b098f5d673f4418ed5f2b9dd0bc78d762f8f75b9bbb61db29c0ff5d10ad`. Previous releases are unchanged.
 
 
 ## v0.16 fixed native coalitions (empirical, saved development data)
 
-[Protocol/results/checks](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_coalitions): prereg d4a6d6f,2091 fixed bodies including all2080 pairs,209100 verdicts. No pair passes. Last8 exact5/100 and centered0/100: compact gate inconclusive against20/100 bar. Last16 exact77/100 and centered29/100; last32 exact100/100 and centered99/100. All five compact cases are sum-one facts across known wordings. Independent raw-vector reconstruction passes all metrics within3.49e-13 and17 frozen hashes. Covered-score passage only; no causal replay, backbone pruning, global minimality, fresh confirmation or new model call.
+[Protocol/results/checks](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-4b/experiments/pdc_qwen35_coalitions): prereg d4a6d6f, 2091 fixed bodies including all 2080 pairs, 209100 verdicts. No pair passes. Last 8 exact 5/100 and centered 0/100: compact gate inconclusive against 20/100 bar. Last 16 exact 77/100 and centered 29/100; last 32 exact 100/100 and centered 99/100. All five compact cases are sum-one facts across known wordings. Independent raw-vector reconstruction passes all metrics within 3.49e-13 and 17 frozen hashes. Covered-score passage only; no causal replay, backbone pruning, global minimality, fresh confirmation or new model call.
 
-[Full coalition metrics](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-coalitions-v1):16 verified payload files,4942886 bytes;
+[Full coalition metrics](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-coalitions-v1): 16 verified payload files, 4942886 bytes;
 SHA-256 `4ec2b1e5faa6b559145c3dddad602572a98fb600e5027d57312cdd66270b5ada`. Original Qwen and memory-learning releases supply inputs;
 converted model frame/weights and environments remain external.
 
@@ -104,19 +108,19 @@ converted model frame/weights and environments remain external.
 [Fieldrun PR#149](https://github.com/jascal/fieldrun/pull/149) corrects
 DeltaNet normalization from sqrt(sum(q*q))+epsilon to the installed
 Transformers reference's sqrt(sum(q*q)+epsilon). A low-norm official-kernel
-golden fails before correction (error0.08847). The original tiny hidden
+golden fails before correction (error 0.08847). The original tiny hidden
 engineering gate fails even without replay and remains recorded. SAME
-inputs/reference and unchanged1e-4 threshold pass after correction (maximum
-hidden error7.153e-7), with tiny9/9, ordinary60/60 and real5/5 global reference
-agreement and194 native tests. Zero replay is bit-identical. Real float16
-reference hidden differences up to0.03407 remain descriptive. This is an
+inputs/reference and unchanged 1e-4 threshold pass after correction (maximum
+hidden error 7.153e-7), with tiny 9/9, ordinary 60/60 and real 5/5 global reference
+agreement and 194 native tests. Zero replay is bit-identical. Real float16
+reference hidden differences up to 0.03407 remain descriptive. This is an
 intentional default-kernel correction and an opt-in final-query embedding
 replay hook, not admitted semantic transfer. The original native binary
-SHA90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
+SHA 90cd5c8dda5b1f5c16888387baa92b78205c82a99b0eb04a98679ca324c1928d and
 old archives/results remain unchanged. Old coalition/admission counts do
 not establish counts on the corrected computation; future studies must
 capture and certify their own actual carriers. No fresh transfer prompts
 have run. [Failures, protocol, correction and verification](https://github.com/jascal/fieldrun/tree/research/pdc-qwen35-replay/experiments/pdc_qwen35_replay_engineering).
 
-[Engineering raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-replay-engineering-v1):78 verified payload files,21665828 bytes,
+[Engineering raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-replay-engineering-v1): 78 verified payload files, 21665828 bytes,
 SHA-256 `42233206bee1cf7cdd6eb745558c9e02d2b68364d3d00993d6f47abdee9e0a1e`. Includes failed/corrected captures, source and both experimental executables; real weights/environments remain external.

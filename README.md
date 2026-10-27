@@ -114,19 +114,19 @@ replay, useful service, or fresh held-out north-star result is established.
 learned output frames, with a verified per-file manifest.
 
 
-v0.15 adds fixed memory-content controls on the same27 development triples:
-a period gives9/27 correct; a wrong intermediate gives0/27, with all27
+v0.15 adds fixed memory-content controls on the same 27 development triples:
+a period gives 9/27 correct; a wrong intermediate gives 0/27, with all 27
 answers following that wrong value. This supports supplied-digit sensitivity
 on this slice, including error propagation; it is not admitted replay or
-fresh confirmation. Correct/empty baselines remain27/27 and12/27.
+fresh confirmation. Correct/empty baselines remain 27/27 and 12/27.
 
 [Memory-control raw evidence](https://github.com/jascal/pdc/releases/tag/pdc-qwen35-memory-controls-v1) contains all new captures and reference
 outputs, with a per-file verified manifest.
 
 
 v0.16 records a frozen saved-frame coalition diagnostic: no native pair
-passes, last8 contributions pass exact5/100 (compact gate inconclusive),
-and last16 pass77/100 exact and29/100 centered. Larger-group passage
+passes, last 8 contributions pass exact 5/100 (compact gate inconclusive),
+and last 16 pass 77/100 exact and 29/100 centered. Larger-group passage
 does not establish replay, pruning or fresh generalization.
 
 
